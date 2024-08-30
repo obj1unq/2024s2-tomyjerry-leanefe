@@ -18,11 +18,11 @@ describe "Tom y Jerry" {
   }
 
   test "Poder y querer comer" {
-    assert.equals(false, tom.puedeComer(120))
-    assert.equals(false, tom.quiereComer(jerry, 120))
-    assert.equals(true, tom.puedeComer(96))
-    assert.equals(false, tom.quiereComer(nibbles, 96))
-    assert.equals(true, tom.puedeComer(60))
-    assert.equals(true, tom.quiereComer(nibbles, 60))
+    assert.notThat(tom.puedeComer(120))
+    assert.notThat(tom.quiereComer(jerry, 120))
+    assert.that(tom.puedeComer(96))
+    assert.notThat(tom.quiereComer(nibbles, 96))
+    assert.that(tom.puedeComer(60))
+    assert.that(tom.quiereComer(nibbles, 60))
   }
 }
